@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ua.kusakabe.opencvcamprocessing.controller.VideoOutputController">
+   <children>
+      <ImageView fx:id="imageOutput" fitHeight="600.0" fitWidth="600.0" pickOnBounds="true" preserveRatio="true" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+      <VBox prefHeight="200.0" prefWidth="200.0" spacing="5.0" style="-fx-background-color: #b0b0b0;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Label fx:id="actionLog" text="Action log">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font></Label>
+            <Label layoutX="20.0" layoutY="20.0" text="Camera controls" />
+            <Button fx:id="startCameraBtn" mnemonicParsing="false" onAction="#startCamera" text="Start camera" />
+            <Button fx:id="stopCameraBtn" mnemonicParsing="false" onAction="#stopCamera" text="Stop camera" />
+            <Label text="Modes" />
+            <Button fx:id="defaultModeBtn" mnemonicParsing="false" onAction="#startDefaultMode" text="Default mode" />
+            <Button fx:id="faceRecognitionBtn" layoutX="20.0" layoutY="148.0" mnemonicParsing="false" onAction="#startFaceRecognition" text="Face Recognition" />
+         </children>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+         <padding>
+            <Insets left="10.0" top="10.0" />
+         </padding>
+      </VBox>
+   </children>
+</AnchorPane>
